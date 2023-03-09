@@ -11,7 +11,9 @@ resource "aws_db_instance" "default" {
   instance_class          = "db.t3.micro"
   allocated_storage       = "20"
   username                = "admin"
-  password                = var.password
+  # not working need to hardcode to run tests
+  #password                = var.password
+  password                = "Aa12345678"   
   apply_immediately       = true
   multi_az                = false
   backup_retention_period = 0
